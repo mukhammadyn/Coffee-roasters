@@ -1,0 +1,530 @@
+:root {
+  --site-font: 'Barlow',"Arial", sans-serif;
+  --font-color: #fefcf7;
+  --bg-color: #fefcf7;
+  --btn-color: #0E8784;
+}
+
+
+@font-face {
+  font-family: 'Fraunces 9pt';
+  src: url('../font/Fraunces9pt-Black.woff2') format('woff2'),
+      url('../font/Fraunces9pt-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../font/Barlow-Regular.woff2') format('woff2'),
+      url('../font/Barlow-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../font/Barlow-Bold.woff2') format('woff2'),
+      url('../font/Barlow-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--site-font);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* SCROLL */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(184, 184, 184); 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(184, 184, 184); 
+}
+
+
+
+/* SITE-HEADER */
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 33px;
+  padding-bottom: 40px;
+  padding: 33px 4px 40px 4px;
+}
+
+.site-header__logo {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-header__logo-img {
+  display: block;
+}
+
+.site-header__nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: calc(100vh - 90px);
+  overflow: auto;
+  font-family: 'Fraunces 9pt';
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  background-image: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+}
+
+.site-header_open .site-header__nav {
+  display: block;
+}
+
+.site-nav__list {  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  font-weight: 900;
+  color: #333D4B;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.site-header__btn {
+  padding: 0;
+  border: 0;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background-image: url(../img/icon/byrger.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+.site-header_open .site-header__btn {
+  background-image: url(../img/icon/quite-btn.svg);
+}
+
+
+
+/* COFFEE FEATURES */
+.coffee-features {
+  /* padding: 100px auto 100px auto; */
+  padding-top: 100px;
+  padding-bottom: 99px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-image: url(../img/Bitmap.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.coffee-features__heading {
+  margin: 0 0 24px 0;
+  font-family: 'Fraunces 9pt';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.coffee-features__text {
+  margin: 0;
+  margin-bottom: 39px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.site-link {
+  padding: 14px 31px 16px;
+  border-radius: 6px;
+  font-family: 'Fraunces 9pt';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  text-decoration: none;
+  color: var(--font-color);
+  background-color: var(--btn-color);
+}
+
+.coffee-features__link {
+  width: 217px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* OUR COLLECTION */
+.our-collection {
+  position: relative;
+  padding-top: 120px;
+}
+
+.our-collection__heading {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: 'Fraunces 9pt';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 72px;
+  color: #83888F;
+  text-align: center;
+  background-image: linear-gradient(180deg, rgba(254, 252, 247, 0.0001) 0%, #FEFCF7 100%);
+    background-color: #83888f;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.our-collection__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.collections__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collections__item:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.collections__item-inner {
+  text-align: center;
+}
+
+.collections__item-img {
+  margin-bottom: 24px;
+}
+
+.collections__item-heading {
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333D4B;
+}
+
+.collections__item-desc {
+  margin: 0;
+  text-align: center;
+  color: #333D4B;
+}
+
+
+/* MEDIA */
+@media only screen and (min-width: 568px) {
+
+  .coffee-features {
+    padding: 104px 233px 104px 58px;
+    background-image: url(../img/hero-tablet-b.png);
+  }
+
+  .coffee-features__heading {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: left;
+  }
+
+  .coffee-features__text {
+    text-align: left;
+    width: 398px;
+  } 
+
+  .coffee-features__link {
+    margin: 0;
+  }
+
+  .our-collection {
+    padding-top: 203px;
+  }
+
+  .our-collection__heading {
+    position: absolute;
+    z-index: -1;
+    left: 25px;
+    top: 168px;
+    font-size: 96px;
+    line-height: 72px;
+    text-align: center;
+    white-space: nowrap;
+    background-image: linear-gradient(180deg, rgba(254, 252, 247, 0.0001) -20%, #FEFCF7 100%);
+  }
+
+  .our-collection__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .collections__item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .collections__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .collections__item-img {
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-right: 76px;
+    margin-bottom: 11px;
+  }
+
+  .collections__item-inner {
+    width: 282px;
+    text-align: left;
+  }
+
+  .collections__item-desc {
+    text-align: left;
+  }
+
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+      .coffee-features {
+        background-image: url(../img/hero-tablet-b@2x.png);
+      }
+  }
+}
+
+
+/* CENTER */
+@media only screen and (min-width: 768px) {
+
+  .site-header {
+    padding-top: 40px;
+    padding-bottom: 53px;
+  }
+
+  .site-header__logo-img {
+    width: 236px;
+    height: 26px;
+  }
+
+  .site-header__btn {
+    display: none;
+  }
+
+  .site-header__nav {
+    display: block;
+    position: relative;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Barlow';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.9px;
+  }
+
+  .site-nav__list {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 33px;
+  }
+
+  .site-nav__link {
+    color: #83888F;
+    text-transform: uppercase;
+  }
+}
+
+
+/* MEDIA DESKTOP */
+@media only screen and (min-width: 900px) {
+  .site-header {
+    padding-top: 44px;
+    padding-bottom: 43px;
+  }
+
+  .site-header__logo:active {
+    opacity: 0.6;
+  }
+
+  .site-nav__link {
+    transition: color 0.3s ease;
+  }
+
+  .site-nav__link:hover {
+    color: #333D4B;
+  }
+
+  .coffee-features {
+    background-image: url(../img/hero-desktop-bg.png);
+    background-size: cover;
+    background-position: center 0;
+  }
+
+  .coffee-features__heading {
+    width: 493px;
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .our-collection {
+    padding-bottom: 200px;
+  }
+
+  .our-collection__heading {
+    text-align: center;
+    font-size: 150px;
+    line-height: 140px;
+    left: 90px;
+    top: 126px;
+  }
+
+  .our-collection__list {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .collections__item {
+    flex-direction: column;
+    justify-content: center;
+    width: 255px;
+  }
+
+  .collections__item:not(:last-child) {
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  .collections__item-img {
+    margin: 0;
+    margin-bottom: 71px;
+  }
+
+  .collections__item-heading {
+    text-align: center;
+  }
+
+  .collections__item-desc {
+    text-align: center;
+  }
+}
+
+
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    .coffee-features {
+      background-image: url(../img/hero-desktop-bg@2x.png);
+    }
+}
