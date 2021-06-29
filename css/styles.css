@@ -312,6 +312,118 @@ img {
 }
 
 
+/* FACILITES */
+.facilities__top {
+  position: relative;
+  z-index: 1;
+  padding: 64px 21px 33px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #272D34;
+}
+
+.facilities__top::after {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 634px;
+  top: 100%;
+  left: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #242930;
+  content: '';
+}
+
+.facilities__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: 'Fraunces 9pt';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.facilities__desc {
+  margin: 0;
+  text-align: center;
+}
+
+
+
+/* FACILITIE CARD */
+.facilities__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facilities__item {
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.facilities__item:first-child {
+  margin-top: 36px;
+}
+
+.facilities__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.facilities__item::before {
+  position: absolute;
+  z-index: 1;
+  top: 72px;
+  left:  calc(50% - 36px);
+  width: 72px;
+  height: 72px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bean::before {
+  content: url(../img/bean.svg);
+}
+
+.surprise::before {
+  content: url(../img/surprise.svg);
+}
+
+.car::before {
+  content: url(../img/car.svg); 
+}
+
+.facilitie-card {
+  padding: 200px 26px 51px;
+  border-radius: 8px;
+  background-color: var(--btn-color);
+}
+
+.facilitie__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.facilitie__text {
+  margin: 0;
+  max-width: 212px;
+  text-align: center;
+}
+
+
 /* MEDIA */
 @media only screen and (min-width: 568px) {
 
