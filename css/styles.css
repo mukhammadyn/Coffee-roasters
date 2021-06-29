@@ -134,6 +134,7 @@ img {
 
 .site-header__nav {
   display: none;
+  padding-top: 40px;
   position: absolute;
   top: 100%;
   left: -20px;
@@ -224,6 +225,7 @@ img {
 }
 
 .site-link {
+  display: inline-block;
   padding: 14px 31px 16px;
   border-radius: 6px;
   font-family: 'Fraunces 9pt';
@@ -236,10 +238,9 @@ img {
   background-color: var(--btn-color);
 }
 
-.coffee-features__link {
-  width: 217px;
-  display: block;
-  margin: 0 auto;
+.coffee-features__link-wrap {
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -248,6 +249,7 @@ img {
 .our-collection {
   position: relative;
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .our-collection__heading {
@@ -285,6 +287,7 @@ img {
 }
 
 .collections__item-inner {
+  width: 282px;
   text-align: center;
 }
 
@@ -328,8 +331,8 @@ img {
     width: 398px;
   } 
 
-  .coffee-features__link {
-    margin: 0;
+  .coffee-features__link-wrap {
+    justify-content: flex-start;
   }
 
   .our-collection {
@@ -337,14 +340,8 @@ img {
   }
 
   .our-collection__heading {
-    position: absolute;
-    z-index: -1;
-    left: 25px;
-    top: 168px;
-    font-size: 96px;
-    line-height: 72px;
-    text-align: center;
-    white-space: nowrap;
+    font-size: 75px;
+    line-height: 1;
     background-image: linear-gradient(180deg, rgba(254, 252, 247, 0.0001) -20%, #FEFCF7 100%);
   }
 
@@ -352,11 +349,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: -42px;
   }
 
   .collections__item {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .collections__item:not(:last-child) {
@@ -365,20 +363,30 @@ img {
 
   .collections__item-img {
     flex-shrink: 0;
+    width: 255px;
+    height: 193px;
     object-fit: contain;
-    margin-right: 76px;
-    margin-bottom: 11px;
+    margin-right: 36px;
   }
 
   .collections__item-inner {
     width: 282px;
     text-align: left;
+    margin-top: 30px;
+  }
+
+  .collections__item-heading {
+    margin-bottom: 24px;
   }
 
   .collections__item-desc {
     text-align: left;
   }
 
+
+  .our-collection__heading {
+    margin: 0;
+  }
 
   @media
     only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -439,6 +447,11 @@ img {
     color: #83888F;
     text-transform: uppercase;
   }
+
+  .our-collection__heading {
+    font-size: 96px;
+    line-height: 72px;
+  }
 }
 
 
@@ -489,22 +502,32 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: -70px;
+  }
+  
+  .our-collection__list-wrapper {
+    margin: 0 auto;
+    max-width: 1110px;
   }
 
   .collections__item {
     flex-direction: column;
     justify-content: center;
-    width: 255px;
+    max-width: calc(100% / 4 - 30px);
   }
 
   .collections__item:not(:last-child) {
     margin: 0;
-    margin-right: 30px;
+  }
+
+  .collections__item-inner {
+    max-width: 255px;
+    margin: 0;
   }
 
   .collections__item-img {
-    margin: 0;
-    margin-bottom: 71px;
+    margin: 0 auto;
+    margin-bottom: 68px;
   }
 
   .collections__item-heading {
@@ -513,6 +536,21 @@ img {
 
   .collections__item-desc {
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 892px) and (max-width: 1117px) {
+  .our-collection__heading {
+    font-size: 100px;
+  }
+  .collections__item-inner {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1082px) and (min-width: 899px) {
+  .collections__item-img {
+    margin-bottom: 10px;
   }
 }
 
