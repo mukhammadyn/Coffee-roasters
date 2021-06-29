@@ -313,6 +313,10 @@ img {
 
 
 /* FACILITES */
+.facilites {
+  padding-bottom: 120px;
+}
+
 .facilities__top {
   position: relative;
   z-index: 1;
@@ -387,18 +391,19 @@ img {
   height: 72px;
   background-repeat: no-repeat;
   background-position: center center;
+  content: '';
 }
 
 .bean::before {
-  content: url(../img/bean.svg);
+  background-image: url(../img/bean.svg);
 }
 
 .surprise::before {
-  content: url(../img/surprise.svg);
+  background-image: url(../img/surprise.svg);
 }
 
 .car::before {
-  content: url(../img/car.svg); 
+  background-image: url(../img/car.svg);
 }
 
 .facilitie-card {
@@ -563,6 +568,50 @@ img {
   .our-collection__heading {
     font-size: 96px;
     line-height: 72px;
+  }
+
+
+
+  /* FACILITIES */
+  .facilites {
+    padding-bottom: 144px;
+  }
+
+  .facilities__top::after {
+    height: 344px;
+    background-color: #272d34;
+  }
+
+  .facilities__top-inner {
+    max-width: 527px;
+    margin: 0 auto;
+  }
+
+  .facilities__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .facilities__item {
+    padding: 41px 48px 41px 181px;
+    width: 573px;
+  }
+
+  .facilities__item::before {
+    width: 56px;
+    height: 56px;
+    background-size: contain;
+    top: 65px;
+    left: calc(50% - 216px);
+  }
+
+  .facilitie__text {
+    text-align: left;
+    max-width: 344px;
+  }
+
+  .facilitie__heading {
+    text-align: left;
   }
 }
 
