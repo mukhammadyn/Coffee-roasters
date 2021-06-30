@@ -78,6 +78,16 @@ img {
   overflow: hidden;
 }
 
+.page__container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.site-main {
+  flex-grow: 1;
+}
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -238,6 +248,7 @@ img {
   text-decoration: none;
   color: var(--font-color);
   background-color: var(--btn-color);
+  transition: background-color 0.3s ease;
 }
 
 .site-link:hover {
@@ -571,8 +582,129 @@ img {
 
 
 
+/* ABOUT */
+
+/* ABOUT HERO */
+.about-hero {
+  margin-bottom: 120px;
+  padding: 11px 24px 87px;
+  background-image: url(../img/about-hero-mobile-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.about-hero__heading {
+  margin-top: 111px;
+  margin-bottom: 0;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.about-hero__text {
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-weight: 400;
+  opacity: 0.8;
+  text-align: center;
+}
 
 
+/* COMMITMENT */
+.commitment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+/* .commitment__img {
+  margin-bottom: 48px;
+  border-radius: 8px;
+} */
+
+.commitment__inner {
+  max-width: 344px;
+}
+
+.commitment__content::before {
+  display: block;
+  margin-bottom: 48px;
+  width: 327px;
+  height: 400px;
+  background-image: url(../img/commitment-mobile-img.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 8px;
+  content: '';
+}
+
+.commitment__heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.commitment__desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--title-color);
+}
+
+
+/* QUALITY   */
+.quality {
+  padding: 142px 24px 61px;
+  border-radius: 10px;
+  background-color: #2C343E;
+}
+
+.quality__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.quality__inner::before {
+  position: absolute;
+  z-index: 1;
+  top: -220px;
+  left: calc(50% - 140px);
+  width: 279px;
+  height: 156px;
+  background-image: url(../img/quality-mobile.png);
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.quality__heading {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.quality__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  opacity: 0.8;
+}
 
 /* MEDIA */
 @media only screen and (min-width: 568px) {
@@ -684,6 +816,7 @@ img {
   .site-header__nav {
     display: block;
     position: relative;
+    padding: 0;
     height: auto;
     top: 0;
     left: 0;
@@ -843,6 +976,105 @@ img {
 
   .site-footer__nav-link {
     font-weight: 700;
+  }
+
+
+  /* ABOUT */
+  .about-hero {
+    margin-bottom: 144px;
+    padding: 118px 233px 118px 58px;
+    background-image: url(../img/about-us-hero-tablet-bg.jpg);
+  }
+
+  .about-hero__heading {
+    margin: 0;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  .about-hero__text {
+    text-align: left;
+  }
+
+
+
+  /* COMMITMENT */
+  .commitment {
+    flex-direction: row;
+    padding-bottom: 224px;
+  }
+
+  .commitment__content {
+    display: flex;
+  }
+
+  .commitment__inner {
+    max-width: 339px;
+  }
+
+  .commitment__content::before {
+    margin-right: 69px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 281px;
+    height: 470px;
+    background-image: url(../img/commitment-tablet-img.jpg);
+  }
+
+  .commitment__heading {
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .commitment__desc {
+    text-align: left;
+  }
+
+
+  /* QUALITY */
+  .quality {
+    padding: 224px 58px 67px;
+  }
+
+  .quality__inner::before {
+    width: 573px;
+    height: 320px;
+    top: -374px;
+    left: calc(50% - 287px);
+    background-size: cover;
+    background-image: url(../img/about-quality-tablet.png);
+  }
+
+  .quality__content {
+    margin: 0 auto;
+    max-width: 536px;
+  }
+
+  .quality__heading {
+    margin-bottom: 25px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+      .about-hero {
+        background-image: url(../img/about-us-hero-tablet-bg@2x.jpg);
+      }
+
+      .commitment__content::before {
+        background-image: url(../img/commitment-tablet-img@2x.jpg);
+      }
+
+      .quality__inner::before {
+        background-image: url(../img/about-quality-tablet@2x.png)
+      }
   }
 }
 
@@ -1023,6 +1255,57 @@ img {
   .site-footer__social-link:active .site-footer__social path {
     opacity: 0.6;
   }
+
+
+  /* ABOUT */
+  .about-hero {
+    padding: 137px 750px 137px 85px;
+    background-image: url(../img/about-us-hero-desktop.jpg);
+  }
+
+  .about-hero__content {
+    max-width: 445px;
+  }
+
+
+
+  /* COMMITMENT */
+  .commitment {
+    justify-content: center;
+    padding-bottom: 256px;
+  }
+
+  .commitment__content {
+    align-items: center;
+  }
+
+  .commitment__content::before {
+    margin-right: 125px;
+    width: 445px;
+    height: 520px;
+    background-image: url(../img/commitment-jakey.jpg);
+  }
+
+  .commitment__inner {
+    max-width: 505px;
+  }
+
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+      .about-hero {
+        background-image: url(../img/about-us-hero-desktop@2x.jpg);
+      }
+
+      .commitment__content::before {
+        background-image: url(../img/commitment-jakey@2x.jpg);
+      }
+  }
   
 }
 
@@ -1126,6 +1409,43 @@ img {
   .site-footer__social-link:active .site-footer__social path {
     opacity: 0.6;
   }
+
+  .quality {
+    padding: 88px 655px 176px 85px; 
+  }
+
+  .quality__inner::before {
+    top: -170px;
+    left: calc(50% + 375px);
+    width: 445px;
+    height: 474px;
+    background-image: url(../img/about-quality-desktop.png);
+  }
+  
+  .quality__content {
+    max-width: 505px;
+  }
+
+  .quality__heading {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .quality__text {
+    text-align: left;
+  }
+
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+      .quality__inner::before {
+        background-image: url(../img/about-quality-desktop@2x.png);
+      }
+  }
 }
 
 @media only screen and (min-width: 892px) and (max-width: 1117px) {
@@ -1135,7 +1455,28 @@ img {
   .collections__item-inner {
     max-width: 200px;
   }
+
+
+
+  /* HERO */
+  .about-hero {
+    padding-right: 450px;
+  }
 }
+
+@media screen and (max-width: 1078px) and (min-width:1030px) {
+  .quality__inner::before {
+    left: calc(50% + 357px);
+  }
+}
+
+@media screen and (max-width: 1047px) and (min-width:1023px) {
+  .quality__inner::before {
+    left: calc(50% + -280px);
+  }
+}
+
+
 
 @media only screen and (max-width: 1082px) and (min-width: 899px) {
   .collections__item-img {
@@ -1153,5 +1494,17 @@ img {
   only screen and (                min-resolution: 2dppx) { 
     .coffee-features {
       background-image: url(../img/hero-desktop-bg@2x.png);
+    }
+    .about-hero {
+      padding: 11px 24px 87px;
+      background-image: url(../img/about-hero-mobile-bg@2x.jpg);
+    }
+
+    .commitment__content::before {
+      background-image: url(../img/commitment-mobile-img@2x.jpg);
+    }
+
+    .quality__inner::before {
+      background-image: url(../img/quality-mobile@2x.png);
     }
 }
