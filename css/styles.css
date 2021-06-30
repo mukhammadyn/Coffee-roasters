@@ -3,6 +3,8 @@
   --font-color: #fefcf7;
   --bg-color: #fefcf7;
   --btn-color: #0E8784;
+  --sct-heading: #83888F;
+  --title-color: #333D4B;
 }
 
 
@@ -429,6 +431,77 @@ img {
 }
 
 
+/* HOW IT WORK */
+.how-it-work {
+  padding-bottom: 120px;
+}
+
+.how-it-work__heading {
+  margin-top: 0;
+  margin-bottom: 80px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: var(--sct-heading);
+}
+
+.how-it-work__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: steps;
+}
+
+.how-it-work__item {
+  counter-increment: steps;
+}
+
+.how-it-work__item:not(:last-child) {
+  margin-bottom: 56px;
+}
+
+.how-it-work__item:last-child {
+  margin-bottom: 79px;
+}
+
+.how-it-work__item::before {
+  display: block;
+  margin-bottom: 24px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 1;
+  text-align: center;
+  color: #fdd6ba;
+  content: '0' counter(steps);
+}
+
+.how-it-work__item-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.how-it-work__item-desc {
+  margin: 0;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.how-it-work__link-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 /* MEDIA */
 @media only screen and (min-width: 568px) {
 
@@ -613,6 +686,55 @@ img {
   .facilitie__heading {
     text-align: left;
   }
+
+
+
+  /* HOW IT WORK */
+  .how-it-work__heading {
+    margin-bottom: 119px;
+    text-align: left; 
+  }
+
+  .how-it-work__list {
+    position: relative;
+    z-index: 1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .how-it-work__list::before {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -48px;
+    margin-bottom: 48px;
+    width: 497px;
+    height: 31px;
+    background-image: url(../img/how-it-work-decoration.svg);
+    content: '';
+  }
+
+  .how-it-work__item {
+    max-width: calc(100%/3 - 30px);
+  }
+
+  .how-it-work__item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .how-it-work__item::before {
+    margin-bottom: 42px;
+    text-align: left;
+  }
+
+  .how-it-work__item-title {
+    margin-bottom: 39px;
+    text-align: left;
+  }
+
+  .how-it-work__item-desc {
+    text-align: left;
+  }
 }
 
 
@@ -697,6 +819,53 @@ img {
 
   .collections__item-desc {
     text-align: center;
+  }
+
+}
+
+
+@media only screen and (min-width: 1045px) {
+  .facilities__top::after {
+    top: 99%;
+    height: 282px;
+  }
+
+  .facilities__title {
+    margin-bottom: 32px;
+    font-size: 40px;
+  }
+
+  .facilities__list {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .facilities__item {
+    width: 350px;
+  }
+
+  .facilities__item:first-child {
+    margin-top: 0;
+  } 
+
+  .facilities__item::before {
+    width: 72px;
+    height: 72px;
+    top: 65px;
+    left: calc(50% - 40px);
+  }
+
+  .facilitie-card {
+    padding: 200px 48px 48px;
+  }
+
+  .facilitie__heading {
+    text-align: center;
+  }
+
+  .facilitie__text {
+    text-align: center;
+    max-width: 255px;
   }
 }
 
