@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Coffee subscribe</title>
+</head>
+<body class="page__body">
+  <div class="page__container container">
+    <header class="site-header">
+      <a href="index.html" class="site-header__logo">
+        <img src="/img/icon/site-header-logo.svg" alt="logo and link to home page" class="site-header__logo-img" width="163" height="18">
+      </a>
+      <nav class="site-header__nav site-nav">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Home</a></li>
+          <li class="site-nav__item"><a href="about.html" class="site-nav__link">About us</a></li>
+          <li class="site-nav__item"><a href="plan.html" class="site-nav__link">Create your plan</a></li>
+        </ul>
+      </nav>
+      <button class="site-header__btn js-toggler-btn" aria-label="toggler to navigation"></button>
+    </header>
+<!-- COFFEE SECTION -->
+    <main class="site-main subscribe-main">
+      <section class="hero hero--capuccino">
+        <div class="hero__content">
+          <h1 class="hero__heading hero__heading--big-title">Create a plan</h1>
+          <p class="hero__text hero__text--short">Build a subscription plan that best fits your needs. We offer an assortment of the best 
+            artisan coffees from around the globe delivered fresh to your door.</p>
+        </div>
+      </section>
+
+      <section class="how-it-work how-it-work--dark">
+        <h2 class="how-it-work__heading how-it-work__heading--disabled">How it works</h2>
+        <ul class="how-it-work__list">
+          <li class="how-it-work__item">
+            <h3 class="how-it-work__item-title how-it-work__item-title--light">Pick your coffee</h3>
+            <p class="how-it-work__item-desc how-it-work__item-desc--light">Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+          </li>
+          <li class="how-it-work__item">
+            <h3 class="how-it-work__item-title how-it-work__item-title--light">Choose the frequency</h3>
+            <p class="how-it-work__item-desc how-it-work__item-desc--light">Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+          </li>
+          <li class="how-it-work__item">
+            <h3 class="how-it-work__item-title how-it-work__item-title--light">Receive and enjoy!</h3>
+            <p class="how-it-work__item-desc how-it-work__item-desc--light">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning 
+              world-class coffees curated to provide a distinct tasting experience.</p>
+          </li>
+  
+          
+        </ul>
+        <div class="how-it-work__link-wrap how-it-work__link-wrap--disabled">
+          <a href="plan.html" class="how-it-work__link site-link">Create your plan</a>
+        </div>
+        
+      </section>
+
+      <section class="order-section">
+        <ol class="order-section__nav-list">
+          <li class="order-section__nav-item"><a class="order-section__nav-link" href="#" >Preferences</a></li>
+          <li class="order-section__nav-item"><a class="order-section__nav-link" href="#" >Bean Type</a></li>
+          <li class="order-section__nav-item"><a class="order-section__nav-link" href="#" >Quantity</a></li>
+          <li class="order-section__nav-item"><a class="order-section__nav-link" href="#" >Grind Option</a></li>
+          <li class="order-section__nav-item order-section__nav-item--active"><a class="order-section__nav-link" href="#" >Deliveries</a></li>
+        </ol>
+
+        <form class="order-section__form" action="https://echo.htmlacademy.ru" method="POST">        
+          <section class="order-section__form-cards order-section__form-cards--open">
+            <div class="order-section__card-top">
+              <h2 class="order-section__card-title">How do you drink your coffee?</h2>
+              <button class="order-section__card-btn" type="button"></button>
+            </div>
+            <div class="order-section__card-content order-card">
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="capsule">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Capsule</span>
+                    <span class="order-card__desc">
+                      Compatible with Nespresso systems and similar brewers
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="capsule">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Filter</span>
+                    <span class="order-card__desc">
+                      For pour over or drip methods like Aeropress, Chemex, and V60
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="capsule">
+                <span class="order-card__radio card-radio-last">
+                  <span class="order-card__title">
+                    Espresso</span>
+                    <span class="order-card__desc">
+                      Dense and finely ground beans for an intense, flavorful experience
+                    </span>
+                </span>
+              </label>
+
+            </div>
+          </section>
+
+          <section class="order-section__form-cards">
+            <div class="order-section__card-top">
+              <h2 class="order-section__card-title">What type of coffee?</h2>
+              <button class="order-section__card-btn" type="button"></button>
+            </div>
+            <div class="order-section__card-content order-card">
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="single_origin">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Single Origin</span>
+                    <span class="order-card__desc">
+                      Distinct, high quality coffee from a specific family-owned farm
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="single_origin">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Decaf</span>
+                    <span class="order-card__desc">
+                      Just like regular coffee, except the caffeine has been removed
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="single_origin">
+                <span class="order-card__radio card-radio-last">
+                  <span class="order-card__title">
+                    Blended</span>
+                    <span class="order-card__desc">
+                      Combination of two or three dark roasted beans of organic coffees
+                    </span>
+                </span>
+              </label>
+
+            </div>
+          </section>
+
+          <section class="order-section__form-cards">
+            <div class="order-section__card-top">
+              <h2 class="order-section__card-title">How much would you like?</h2>
+              <button class="order-section__card-btn" type="button"></button>
+            </div>
+            <div class="order-section__card-content order-card">
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="bulk">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    250g</span>
+                    <span class="order-card__desc">
+                      Perfect for the solo drinker. Yields about 12 delicious cups.
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="bulk">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    500g</span>
+                    <span class="order-card__desc">
+                      Perfect option for a couple. Yields about 40 delectable cups.
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="bulk">
+                <span class="order-card__radio card-radio-last">
+                  <span class="order-card__title">
+                    1000g</span>
+                    <span class="order-card__desc">
+                      Perfect for offices and events. Yields about 90 delightful cups.
+                    </span>
+                </span>
+              </label>
+
+            </div>
+          </section>
+
+          <section class="order-section__form-cards">
+            <div class="order-section__card-top">
+              <h2 class="order-section__card-title">Want us to grind them?</h2>
+              <button class="order-section__card-btn" type="button"></button>
+            </div>
+            <div class="order-section__card-content order-card">
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="grind">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Wholebean</span>
+                    <span class="order-card__desc">
+                      Best choice if you cherish the full sensory experience
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="grind">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Filter</span>
+                    <span class="order-card__desc">
+                      For drip or pour-over coffee methods such as V60 or Aeropress
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="grind">
+                <span class="order-card__radio card-radio-last">
+                  <span class="order-card__title">
+                    Cafetiére</span>
+                    <span class="order-card__desc">
+                      Course ground beans specially suited for french press coffee
+                    </span>
+                </span>
+              </label>
+
+            </div>
+          </section>
+
+          <section class="order-section__form-cards order-section__last-form">
+            <div class="order-section__card-top">
+              <h2 class="order-section__card-title">How often should we deliver?</h2>
+              <button class="order-section__card-btn" type="button"></button>
+            </div>
+            <div class="order-section__card-content order-card">
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="deliver">
+                <span class="order-card__radio ">
+                  <span class="order-card__title">
+                    Every week</span>
+                    <span class="order-card__desc">
+                      $7.20 per shipment. Includes free first-class shipping.
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="deliver">
+                <span class="order-card__radio">
+                  <span class="order-card__title">
+                    Every 2 weeks</span>
+                    <span class="order-card__desc">
+                      $9.60 per shipment. Includes free priority shipping.
+                    </span>
+                </span>
+              </label>
+
+              <label class="order-card__label">
+                <input class="visually-hidden order-card__input" required type="radio" name="deliver">
+                <span class="order-card__radio card-radio-last">
+                  <span class="order-card__title">
+                    Every month</span>
+                    <span class="order-card__desc">
+                      $12.00 per shipment. Includes free priority shipping.
+                    </span>
+                </span>
+              </label>
+
+            </div>
+          </section>
+
+          <section class="order-section__summary summary">
+            <h2 class="summary__heading">Order Summary</h2>
+            <p class="summary__total">
+              “I drink my coffee as <span class="drink-us user-cmp">____</span>, with a <span class="type-bean user-cmp">____</span> type of bean. <span class="bulk-coffee user-cmp"></span> ground ala <span class="type-coffee user-cmp">____</span>, sent to me <span class="send-every user-cmp">____</span>.”
+            </p>
+          </section>
+
+          <div class="order-section__submit-wrap">
+            <a class="order-section__submit site-link" href="modal" >Create my plan!</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__logo-wrapper">
+        <a class="site-footer__logo-link" href="#"><img class="site-footer__logo" src="/img/icon/footer-logo.svg" alt="logo" width="218" height="24"></a>
+      </div>
+      <ul class="site-footer__nav-list">
+        <li class="site-footer__nav-item"><a href="index.html" class="site-footer__nav-link">Home</a></li>
+        <li class="site-footer__nav-item"><a href="about.html" class="site-footer__nav-link">About us</a></li>
+        <li class="site-footer__nav-item"><a href="plan.html" class="site-footer__nav-link">Create your plan</a></li>
+      </ul>
+
+      <ul class="site-footer__social-list">
+        <li class="site-footer__social-item"><a class="site-footer__social-link" href="facebook.com"><svg class="site-footer__social" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.7752 0H1.42522C0.69322 0 0.10022 0.593 0.10022 1.325V22.676C0.10022 23.407 0.69322 24 1.42522 24H12.9202V14.706H9.79222V11.084H12.9202V8.413C12.9202 5.313 14.8132 3.625 17.5792 3.625C18.9042 3.625 20.0422 3.724 20.3742 3.768V7.008L18.4562 7.009C16.9522 7.009 16.6612 7.724 16.6612 8.772V11.085H20.2482L19.7812 14.707H16.6612V24H22.7772C23.5072 24 24.1002 23.407 24.1002 22.675V1.325C24.1002 0.593 23.5072 0 22.7752 0Z" fill="#FEFCF7"/>
+          </svg></a></li>
+        <li class="site-footer__social-item"><a class="site-footer__social-link" href="twitter.com" ><svg class="site-footer__social" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.1002 2.55705C23.2172 2.94905 22.2682 3.21305 21.2722 3.33205C22.2892 2.72305 23.0702 1.75805 23.4372 0.608047C22.4862 1.17205 21.4322 1.58205 20.3102 1.80305C19.4132 0.846047 18.1322 0.248047 16.7162 0.248047C13.5372 0.248047 11.2012 3.21405 11.9192 6.29305C7.82822 6.08805 4.20022 4.12805 1.77122 1.14905C0.48122 3.36205 1.10222 6.25705 3.29422 7.72305C2.48822 7.69705 1.72822 7.47605 1.06522 7.10705C1.01122 9.38805 2.64622 11.522 5.01422 11.997C4.32122 12.185 3.56222 12.229 2.79022 12.081C3.41622 14.037 5.23422 15.46 7.39022 15.5C5.32022 17.123 2.71222 17.848 0.10022 17.54C2.27922 18.937 4.86822 19.752 7.64822 19.752C16.7902 19.752 21.9552 12.031 21.6432 5.10605C22.6052 4.41105 23.4402 3.54405 24.1002 2.55705Z" fill="#FEFCF7"/>
+          </svg>
+          </a></li>
+        <li class="site-footer__social-item"><a class="site-footer__social-link" href="instagram.com"><svg class="site-footer__social" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1002 0C8.84122 0 8.43322 0.014 7.15322 0.072C2.79522 0.272 0.37322 2.69 0.17322 7.052C0.11422 8.333 0.10022 8.741 0.10022 12C0.10022 15.259 0.11422 15.668 0.17222 16.948C0.37222 21.306 2.79022 23.728 7.15222 23.928C8.43322 23.986 8.84122 24 12.1002 24C15.3592 24 15.7682 23.986 17.0482 23.928C21.4022 23.728 23.8302 21.31 24.0272 16.948C24.0862 15.668 24.1002 15.259 24.1002 12C24.1002 8.741 24.0862 8.333 24.0282 7.053C23.8322 2.699 21.4112 0.273 17.0492 0.073C15.7682 0.014 15.3592 0 12.1002 0ZM12.1002 2.163C15.3042 2.163 15.6842 2.175 16.9502 2.233C20.2022 2.381 21.7212 3.924 21.8692 7.152C21.9272 8.417 21.9382 8.797 21.9382 12.001C21.9382 15.206 21.9262 15.585 21.8692 16.85C21.7202 20.075 20.2052 21.621 16.9502 21.769C15.6842 21.827 15.3062 21.839 12.1002 21.839C8.89622 21.839 8.51622 21.827 7.25122 21.769C3.99122 21.62 2.48022 20.07 2.33222 16.849C2.27422 15.584 2.26222 15.205 2.26222 12C2.26222 8.796 2.27522 8.417 2.33222 7.151C2.48122 3.924 3.99622 2.38 7.25122 2.232C8.51722 2.175 8.89622 2.163 12.1002 2.163ZM5.93822 12C5.93822 8.597 8.69722 5.838 12.1002 5.838C15.5032 5.838 18.2622 8.597 18.2622 12C18.2622 15.404 15.5032 18.163 12.1002 18.163C8.69722 18.163 5.93822 15.403 5.93822 12ZM12.1002 16C9.89122 16 8.10022 14.21 8.10022 12C8.10022 9.791 9.89122 8 12.1002 8C14.3092 8 16.1002 9.791 16.1002 12C16.1002 14.21 14.3092 16 12.1002 16ZM17.0652 5.595C17.0652 4.8 17.7102 4.155 18.5062 4.155C19.3012 4.155 19.9452 4.8 19.9452 5.595C19.9452 6.39 19.3012 7.035 18.5062 7.035C17.7102 7.035 17.0652 6.39 17.0652 5.595Z" fill="#FEFCF7"/>
+          </svg></a></li>
+      </ul>
+    </footer>
+
+  </div>
+  
+
+  <script src="/script/main.js"></script>
+</body>
+</html>
