@@ -786,6 +786,7 @@ img {
 }
 
 .order-section__card-btn {
+  transition: transform 0.5s ease;
   transform: rotate(180deg);
 }
 
