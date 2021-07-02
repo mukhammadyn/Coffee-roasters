@@ -21,3 +21,19 @@ elsOrderBtn.forEach(function (button) {
     button.closest('.order-section__form-cards').classList.add('order-section__form-cards--open');
   });
 });
+
+var elOrderSubmit = document.querySelector('.order-section__submit');
+
+var elOrderModal = document.querySelector('.order-modal');
+
+elOrderSubmit.addEventListener('click', function(evt){
+  evt.preventDefault();
+  elOrderModal.classList.add('order-modal--open');
+})
+
+
+window.onclick = function(event) {
+  if (event.target == elOrderModal) {
+    elOrderModal.classList.remove('order-modal--open');
+  }
+}
