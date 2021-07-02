@@ -151,6 +151,7 @@ img {
   top: 100%;
   left: -20px;
   right: -20px;
+  z-index: 99;
   height: calc(100vh - 90px);
   overflow: auto;
   font-family: 'Fraunces 9pt';
@@ -603,7 +604,6 @@ img {
   font-weight: 900;
   font-size: 28px;
   line-height: 28px;
-  text-transform: capitalize;
   text-align: center;
 }
 
@@ -707,6 +707,83 @@ img {
   opacity: 0.8;
 }
 
+
+
+/* LOCATION */
+.locations {
+  padding-top: 168px;
+  padding-bottom: 120px;
+}
+
+.locations__heading {
+  margin-top: 0;
+  margin-bottom: 75px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #83888f;
+}
+
+.locations__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.locations__item:not(:last-child) {
+  margin-bottom: 80px;
+}
+
+.locations__item::before {
+  display: block;
+  margin: 0 auto;
+  width: 53px;
+  height: 52px;
+  margin-bottom: 48px;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.uk::before {
+  background-image: url(../img/icon/uk.svg);
+}
+
+.canada::before {
+  background-image: url(../img/icon/canada.svg);
+}
+
+.australia::before {
+  background-image: url(../img/icon/australia.svg);
+}
+
+.locations__item-heading {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-family: 'Fraunces 9pt';
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  color: #333D4B;
+}
+
+.locations__address {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #333D4B;
+}
+
+.tel-numbers {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #333D4B;
+  text-decoration: none;
+}
 
 
 /* SUBSCRIBTION */
@@ -1051,6 +1128,40 @@ img {
     width: auto;
   }
 
+  .site-header__nav {
+    display: block;
+    position: relative;
+    padding: 0;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Barlow';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.9px;
+  }
+  
+  .site-nav__list {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-header__btn {
+    display: none;
+  }
+
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 33px;
+  }
+
+  .site-nav__link {
+    color: #83888F;
+    text-transform: uppercase;
+  }
+
   @media
     only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (   min--moz-device-pixel-ratio: 2),
@@ -1325,6 +1436,18 @@ img {
   }
 
 
+  /* LOCATION */
+  .locations__heading {
+    margin-top: 0;
+    margin-bottom: 75px;
+    font-family: 'Fraunces 9pt';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: #83888f;
+  }
+
+
   /* SUBSCRIBTION */ 
   .hero--capuccino {
     padding-top: 127px;
@@ -1340,6 +1463,8 @@ img {
   /* HOW-IT-WORK */
   .how-it-work--dark {
     padding: 176px 39px 70px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
   .how-it-work__list::before {
@@ -1505,6 +1630,10 @@ img {
 
   .site-nav__link:hover {
     color: #333D4B;
+  }
+
+  .subscribe-main .hero--capuccino {
+    background-image: url(../img/subscribe-hero-desktop-bg.png);
   }
 
   .coffee-features {
@@ -1710,6 +1839,10 @@ img {
       .commitment__content::before {
         background-image: url(../img/commitment-jakey@2x.jpg);
       }
+
+      .hero--capuccino {
+        background-image: url(../img/subscribe-hero-desktop-bg@2x.png);
+      }
   }
   
 }
@@ -1859,6 +1992,8 @@ img {
   }
 
   .how-it-work--dark {
+    margin-left: 0;
+    margin-right: 0;
     padding-right: 150px;
     padding-left: 85px;
   }
